@@ -27,7 +27,10 @@
                 randomSortAnswers: false,
                 preventUnanswered: false,
                 perQuestionResponseMessaging: true,
-                completionResponseMessaging: false
+                completionResponseMessaging: false,
+				hideHeaderOnStart: true,
+				completionHideDetail: true,
+				onCompletion: function() {}
             },
 
             // Class Name Strings (Used for building quiz and for selectors)
@@ -211,7 +214,11 @@
                         // If response messaging is NOT disabled, add it
                         if (plugin.config.perQuestionResponseMessaging || plugin.config.completionResponseMessaging) {
                             // Now let's append the correct / incorrect response messages
-                            var responseHTML = $('<ul class="' + responsesClass + '"></ul>');
+							var _class = responsesClass;
+							if (plugin.config.completionHideDetail) {
+								_class = "hide";
+							}
+                            var responseHTML = $('<ul class="' + _class + '"></ul>');
                             responseHTML.append('<li class="' + correctResponseClass + '">' + question.correct + '</li>');
                             responseHTML.append('<li class="' + incorrectResponseClass + '">' + question.incorrect + '</li>');
 
@@ -258,8 +265,9 @@
                     if (firstQuestion.length) {
                         firstQuestion.fadeIn(500);
                     }
+					
                 }
-
+				
                 if (plugin.config.skipStartButton || $quizStarter.length == 0) {
                     start();
                 } else {
@@ -267,6 +275,10 @@
                         start();
                     });
                 }
+				if (plugin.config.hideHeaderOnStart) {
+					$quizName.hide();
+					$quizHeader.hide();
+				}
             },
 
             // Resets (restarts) the quiz (hides results, resets inputs, and displays first question)
@@ -439,6 +451,9 @@
                         $(_element + ' .button:not(' + _tryAgainBtn + '), ' + _element + ' ' + _questionCount).hide();
                         $(_element + ' ' + _question + ', ' + _element + ' ' + _answers + ', ' + _element + ' ' + _responses).show();
                         $quizResults.append($(_element + ' ' + _questions)).fadeIn(500);
+						
+						plugin.config.onCompletion();
+		
                     } else {
                         $quizResults.fadeIn(500);
                     }

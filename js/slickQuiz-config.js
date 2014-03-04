@@ -1,72 +1,48 @@
-// Setup your quiz text and questions here
-
-// NOTE: pay attention to commas, IE struggles with those bad boys
-
 var quizJSON = {
+
     "info": {
-        "name":    "Test Your Knowledge!!",
-        "main":    "<p>Think you're smart enough to be on Jeopardy? Find out with this super crazy knowledge quiz!</p>",
-        "results": "<h5>Learn More</h5><p>Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus.</p>",
-        "level1":  "Jeopardy Ready",
-        "level2":  "Jeopardy Contender",
-        "level3":  "Jeopardy Amateur",
-        "level4":  "Jeopardy Newb",
-        "level5":  "Stay in school, kid..." // no comma here
+        "name":    "測試你的數位認證知識!!",
+        "main":    "<p>你準備好要參加數位認證了嗎？<br/>來試試這個無敵瘋狂的數位認證測驗吧！</p>",
+        "results": "<h5>繼續學習</h5><p>數位認證有很多深奧的學問在裡頭！</p>",
+        "level1":  "數位認證 神人一般",
+        "level2":  "數位認證 專家級",
+        "level3":  "數位認證 業餘級",
+        "level4":  "數位認證 新手級",
+        "level5":  "請好好唸書吧，孩子……" // no comma here		
     },
-    "questions": [
+    "questions": []
+		/*
         { // Question 1 - Multiple Choice, Single True Answer
-            "q": "What number is the letter A in the English alphabet?",
+            "q": "何者不是電漿電視(PDP)的特色",
             "a": [
-                {"option": "8",      "correct": false},
-                {"option": "14",     "correct": false},
-                {"option": "1",      "correct": true},
-                {"option": "23",     "correct": false} // no comma here
+                {"option": "反應速度快動態影像幾乎無殘影",      "correct": false},
+                {"option": "非自體發光",     "correct": true},
+                {"option": "無壞點問題",      "correct": false},
+                {"option": "高耗電量",     "correct": false} // no comma here
             ],
-            "correct": "<p><span>That's right!</span> The letter A is the first letter in the alphabet!</p>",
-            "incorrect": "<p><span>Uhh no.</span> It's the first letter of the alphabet. Did you actually <em>go</em> to kindergarden?</p>" // no comma here
+            "correct": "<p><span>答對了！</span></p>",
+            "incorrect": "<p><span>錯了！</span> 答案是<em>非自體發光</em></p>" // no comma here
         },
         { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
-            "q": "Which of the following best represents your preferred breakfast?",
+            "q": "何者不是LED液晶電視的特色?",
             "a": [
-                {"option": "Bacon and eggs",               "correct": false},
-                {"option": "Fruit, oatmeal, and yogurt",   "correct": true},
-                {"option": "Leftover pizza",               "correct": false},
-                {"option": "Eggs, fruit, toast, and milk", "correct": true} // no comma here
+                {"option": "超耗電夀命短", "correct": true},
+                {"option": "高動態對比", "correct": false},
+                {"option": "無輻射環保無汞", "correct": false},
+                {"option": "適合輕薄設計", "correct": false} // no comma here
             ],
-            "select_any": true,
-            "correct": "<p><span>Nice!</span> Your cholestoral level is probably doing alright.</p>",
-            "incorrect": "<p><span>Hmmm.</span> You might want to reconsider your options.</p>" // no comma here
+            "correct": "<p><span>答對了！</span></p>",
+            "incorrect": "<p><span>錯了！</span> 答案是<em>超耗電夀命短</em></p>" // no comma here
         },
         { // Question 3 - Multiple Choice, Multiple True Answers, Select All
-            "q": "Where are you right now? Select ALL that apply.",
+            "q": "複選以下何者是傳統直下式面板的特色?",
             "a": [
-                {"option": "Planet Earth",           "correct": true},
-                {"option": "Pluto",                  "correct": false},
-                {"option": "At a computing device",  "correct": true},
-                {"option": "The Milky Way",          "correct": true} // no comma here
+                {"option": "成本低",           "correct": false},
+                {"option": "較耗電",                  "correct": true},
+                {"option": "獨立區域調整明暗度",  "correct": true},
+                {"option": "適合平價大螢幕需求的用戶",          "correct": false} // no comma here
             ],
-            "correct": "<p><span>Brilliant!</span> You're seriously a genius, (wo)man.</p>",
-            "incorrect": "<p><span>Not Quite.</span> You're actually on Planet Earth, in The Milky Way, At a computer. But nice try.</p>" // no comma here
-        },
-        { // Question 4
-            "q": "How many inches of rain does Michigan get on average per year?",
-            "a": [
-                {"option": "149",    "correct": false},
-                {"option": "32",     "correct": true},
-                {"option": "3",      "correct": false},
-                {"option": "1291",   "correct": false} // no comma here
-            ],
-            "correct": "<p><span>Holy bananas!</span> I didn't actually expect you to know that! Correct!</p>",
-            "incorrect": "<p><span>Fail.</span> Sorry. You lose. It actually rains approximately 32 inches a year in Michigan.</p>" // no comma here
-        },
-        { // Question 5
-            "q": "Is Earth bigger than a basketball?",
-            "a": [
-                {"option": "Yes",    "correct": true},
-                {"option": "No",     "correct": false} // no comma here
-            ],
-            "correct": "<p><span>Good Job!</span> You must be very observant!</p>",
-            "incorrect": "<p><span>ERRRR!</span> What planet Earth are <em>you</em> living on?!?</p>" // no comma here
-        } // no comma here
-    ]
+            "correct": "<p><span>答對了！</span></p>",
+            "incorrect": "<p><span>錯了！</span> 答案是<em>較耗電</em>與<em>較耗電</em></p>" // no comma here
+        }*/    
 };

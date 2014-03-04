@@ -11,7 +11,7 @@ body {
     border: 2px solid #ccc;
     border-top: none;
     background: #fff;
-    padding: 20px;
+    padding: 2px 4px 100px 4px;
     font-family: Trebuchet, Arial,Helvetica,sans-serif;
     font-size: 16px;
     color: #353535;
@@ -73,7 +73,11 @@ ol li { list-style-type: decimal; margin-left: 20px; }
 }
 
 .tryAgain {
+	float: none;	
     margin: 20px 0;
+}
+.quizResultsCopy p{
+	margin-bottom: 20px;
 }
 
 /* clearfix */
@@ -136,4 +140,47 @@ ul.responses li.correct p span {
 .quizResultsCopy {
     clear: both;
     margin-top: 20px;
+}
+
+
+/* For mobile : like samsung grand(480 * 800): */
+@media screen and (max-width : 480px){
+	body{
+		
+	}
+
+	h3 {
+
+	}
+}
+
+
+/* For iphone: */
+@media screen and (max-width : 320px){
+	body{
+		
+	}
+	h3 {
+		
+	}	
+} 
+
+
+/* For ipad: */
+@media screen and (max-width : 760px){} 
+
+.company_wrap{
+padding-left:1em;
+}
+.company_info{
+margin-top:1em;
+}
+.start{
+margin-top:2em;
+}
+.correct_ans{
+border: 1px solid green;
+}
+.hide{
+display:none;
 }

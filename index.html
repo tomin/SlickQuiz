@@ -3,11 +3,11 @@
     <head>
         <meta content="text/html; charset=utf-8" http-equiv="content-type">
 
-        <title>SlickQuiz Demo</title>
-
+        <title>測試你的數位認證知識!!</title>
         <link href="css/reset.css" media="screen" rel="stylesheet" type="text/css">
         <link href="css/slickQuiz.css" media="screen" rel="stylesheet" type="text/css">
         <link href="css/master.css" media="screen" rel="stylesheet" type="text/css">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     </head>
 
     <body id="slickQuiz">
@@ -17,16 +17,43 @@
             <div class="quizHeader">
                 <!-- where the quiz main copy goes -->
 
-                <a class="button startQuiz" href="#">Get Started!</a>
+				<div class="custom_start">
+					<h1>測試你的數位認證知識!!</h1>
+					<ul class="company_wrap">					
+						<li class="company_info">你的工號：<input id="company_id" type="number" value="" /></li>
+						<li class="company_info">你的名稱：<input id="company_name" type="text" value="" /></li>
+						<li class="company_info">
+							測驗項目：
+							<select id="quiz_item">
+								<option selected="selected" value="tv">電視</option>
+								<option value="nb">筆電</option>
+								<option value="mostfail">錯誤率最高題庫</option>							
+							</select>					
+						</li>
+						<li class="company_info">
+							測驗題數：
+							<select id="quiz_total">
+								<option value="50" selected="selected">50</option>
+								<option value="25">25</option>							
+								<option value="10">10</option>
+								<option value="5">5</option>
+							</select>
+						</li>
+					</ul>				
+					<a class="button start" href="">開始吧！</a>
+				</div>
+				
+                <a class="button startQuiz" href="#">開始吧！</a>
             </div>
 
             <!-- where the quiz gets built -->
         </div>
 
         <div class="quizResults">
-            <h3 class="quizScore">You Scored: <span><!-- where the quiz score goes --></span></h3>
+			<div class="company_user"><span id="quiz_name"></span><span id="quiz_id"></span></div>
+            <h3 class="quizScore">你的得分: <span><!-- where the quiz score goes --></span></h3>
 
-            <h3 class="quizLevel"><strong>Ranking:</strong> <span><!-- where the quiz ranking level goes --></span></h3>
+            <h3 class="quizLevel"><strong>等級:</strong> <span><!-- where the quiz ranking level goes --></span></h3>
 
             <div class="quizResultsCopy">
                 <!-- where the quiz result copy goes -->
@@ -36,6 +63,7 @@
         <script src="js/jquery.js"></script>
         <script src="js/slickQuiz-config.js"></script>
         <script src="js/slickQuiz.js"></script>
+		<script src="js/jquery.csv-0.71.min.js"></script>		
         <script src="js/master.js"></script>
     </body>
 </html>
